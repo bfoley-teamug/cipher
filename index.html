@@ -1,10 +1,35 @@
-<div class="topInput">
+<html>
+<head>
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+<h1>Your Caesar Cipher Pal</h1>
+
+  <div id="letters">
     <form id="letters">
-    Letters: <input type="text" class="input">
-    Number: <input type="text" class="num">
-    <button type="button" id="button" class="btn btn-outline-danger">Click</button>
-   </form>
+      <input type="text" class="input">
+    </form>
+  </div>
+
+<div class="slidecontainer">
+  <input type="range" min="-26" max="26" value="0" class="slider" id="myRange"><span id="number"></span>
 </div>
 
-<p id="output"></p>
- 
+
+<div>
+  <button type="button" id="button" class="btn">Enter</button>
+</div>
+
+  <div id="output"></div>
+
+</div>
+
+
+
+
+  <script src="app.js"></script>
+</body>
+</html>

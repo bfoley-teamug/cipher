@@ -1,16 +1,23 @@
+var slider = document.getElementById("myRange");
+var output = document.getElementById("number");
+output.innerHTML = slider.value;
+
+slider.oninput = function() {
+    output.innerHTML = this.value;
+}
 
 const button = document.querySelector('button#button');
 
 const letters = document.getElementById('letters');
 const input = letters.querySelector('.input');
-const num = letters.querySelector('.num');
 
 button.addEventListener('click', (e) => {
   e.preventDefault();
-  console.log("hey");
+  console.log(parseInt(slider.value));
+
 
   const char = input.value;
-  const numbers = num.value;
+  const numbers = (parseInt(slider.value));
 
   function caesar(char, numbers) {
   numbers = numbers % 26;
@@ -37,11 +44,9 @@ button.addEventListener('click', (e) => {
   return newStr;
  }
 
- var hey = caesar(char, numbers);
+ var answer = caesar(char, numbers);
  const output = document.getElementById('output');
- console.log(hey);
-
- output.textContent = hey;
+ output.textContent = answer;
 
  });
 
